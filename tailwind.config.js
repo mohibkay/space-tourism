@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'primary-dark': '#0B0D17',
+        'secondary-light': '#D0D6F9',
+      },
       backgroundImage: {
         'home-mobile': "url('/assets/home/mobile.jpg')",
         'home-tablet': "url('/assets/home/tablet.jpg')",
@@ -32,13 +36,13 @@ module.exports = {
         'sh-2': '14px',
         'nav-md': '14px',
         'nav-lg': '16px',
-        'body-sm': '15px',
-        'body-md': '16px',
-        'body-lg': '18px',
+        'body-sm': ['15px', '25px'],
+        'body-md': ['16px', '28px'],
+        'body-lg': ['18px', '32px'],
       },
-      colors: {
-        'primary-dark': '#0B0D17',
-        'secondary-light': '#D0D6F9',
+      fontFamily: {
+        bellefair: 'var(--font-bellefair)',
+        barlow: 'var(--font-barlow)',
       },
     },
   },
