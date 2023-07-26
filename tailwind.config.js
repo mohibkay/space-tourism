@@ -9,6 +9,8 @@ module.exports = {
     extend: {
       backgroundImage: {
         'home-mobile': "url('/assets/home/mobile.jpg')",
+        'home-tablet': "url('/assets/home/tablet.jpg')",
+        'home-desktop': "url('/assets/home/desktop.jpg')",
       },
     },
   },

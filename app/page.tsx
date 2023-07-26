@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className='bg-home-mobile bg-cover h-screen'>
+    <div className='bg-home-mobile md:bg-home-tablet lg:bg-home-desktop bg-cover h-screen'>
       <Navbar />
       <Hero />
     </div>
