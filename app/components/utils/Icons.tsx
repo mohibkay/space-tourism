@@ -1,7 +1,7 @@
 export const Icons = {
   logo: () => (
     <svg xmlns='http://www.w3.org/2000/svg' width='48' height='48'>
-      <g fill='none' fill-rule='evenodd'>
+      <g fill='none' fillRule='evenodd'>
         <circle cx='24' cy='24' r='24' fill='#FFF' />
         <path
           fill='#0B0D17'
@@ -12,7 +12,7 @@ export const Icons = {
   ),
   hamburger: () => (
     <svg xmlns='http://www.w3.org/2000/svg' width='24' height='21'>
-      <g fill='#D0D6F9' fill-rule='evenodd'>
+      <g fill='#D0D6F9' fillRule='evenodd'>
         <path d='M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z' />
       </g>
     </svg>
