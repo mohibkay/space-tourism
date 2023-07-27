@@ -12,9 +12,7 @@ const Menu = () => {
   return (
     <ul>
       {MENU.map(({ id, nav }) => (
-        <li key={id} className='mb-8'>
-          <NavItem title={nav} numeral={id} isMobile />
-        </li>
+        <li key={id} className='mb-8'></li>
       ))}
     </ul>
   );
