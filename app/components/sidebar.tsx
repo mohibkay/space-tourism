@@ -5,7 +5,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from 'components/ui/tabs';
 import NavItem from 'components/ui/nav-item';
 import { Icons } from 'components/utils/Icons';
 import { Button } from 'components/ui/button';
-import { cn } from 'lib/utils';
+import { BREAKPOINTS, cn } from 'lib/utils';
+import { useMediaQuery } from 'hooks/useMediaQuery';
 
 const MENU = [
   { id: 0, nav: 'home', route: '/' },
@@ -20,16 +21,15 @@ interface Props {
 }
 
 const Sidebar: React.FC<Props> = ({ hideSidebar, isSidebarVisible }) => {
+  const isTablet = useMediaQuery(BREAKPOINTS.tablet);
+
+  if (isTablet) return <></>;
   return (
     <aside
       className={cn(
-        'w-[70%] h-[100vh] absolute top-0  text-white transition-all duration-700',
+        'w-[70%] h-[100vh] absolute top-0  text-white transition-all duration-700 bg-white/5 backdrop-blur-2xl',
         isSidebarVisible ? 'right-0' : '-right-full'
       )}
-      style={{
-        background: 'rgba(255, 255, 255, 0.04)',
-        backdropFilter: 'blur(40.774227142333984px)',
-      }}
     >
       <Button className='absolute top-8 right-[26px]' onClick={hideSidebar}>
         <Icons.close />
@@ -38,7 +38,7 @@ const Sidebar: React.FC<Props> = ({ hideSidebar, isSidebarVisible }) => {
       <ul className='mt-32 ml-8'>
         {MENU.map(({ id, nav, route }) => (
           <li key={id} className='mb-8'>
-            <NavItem title={nav} numeral={id} route={route} isMobile />
+            <NavItem title={nav} numeral={id} route={route} renderNumeral />
           </li>
         ))}
       </ul>
