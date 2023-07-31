@@ -27,7 +27,7 @@ const Sidebar: React.FC<Props> = ({ hideSidebar, isSidebarVisible }) => {
   return (
     <aside
       className={cn(
-        'w-[70%] h-[100vh] absolute top-0  text-white transition-all duration-700 bg-white/5 backdrop-blur-2xl',
+        'w-[70%] h-[100vh] absolute top-0 text-white transition-all duration-700 bg-white/4 backdrop-blur-2xl',
         isSidebarVisible ? 'right-0' : '-right-full'
       )}
     >

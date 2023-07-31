@@ -4,20 +4,23 @@ interface Props {
   title: string;
   route: string;
   numeral?: number;
-  isMobile?: boolean;
+  renderNumeral?: boolean;
 }
 
 const NavItem: React.FC<Props> = ({
   title,
   route,
   numeral,
-  isMobile = false,
+  renderNumeral = false,
 }) => {
   const paddedNumeral = String(numeral).padStart(2, '0');
 
   return (
-    <Link href={route} className='text-nav-lg'>
-      {isMobile && <span className='mr-3'>{paddedNumeral}</span>}
+    <Link
+      href={route}
+      className='text-nav-lg md:max-lg:text-nav-md tracking-wider'
+    >
+      {renderNumeral && <span className='mr-3 font-bold'>{paddedNumeral}</span>}
       <span className='uppercase'>{title}</span>
     </Link>
   );

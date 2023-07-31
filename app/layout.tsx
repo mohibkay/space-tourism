@@ -4,7 +4,7 @@ import { Bellefair, Barlow_Condensed } from 'next/font/google';
 
 const bellefair = Bellefair({
   subsets: ['latin'],
-  weight: '400',
+  weight: ['400'],
   variable: '--font-bellefair',
 });
 

@@ -12,7 +12,7 @@ const Hero = () => {
           <span className='text-h1-sm md:text-h1-md font-bellefair'>SPACE</span>
         </h1>
 
-        <p className='text-body-sm md:text-body-md lg:text-body-lg lg:max-w-[444px] font-barlow'>
+        <p className='text-body-sm md:text-body-md lg:text-body-lg md:max-w-[45ch] lg:max-w-[444px] font-barlow'>
           Let&apos;s face it; if you want to go to space, you might as well
           genuinely go to outer space and not hover kind of on the edge of it.
           Well sit back, and relax because we&apos;ll give you a truly out of

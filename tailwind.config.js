@@ -44,6 +44,9 @@ module.exports = {
         bellefair: 'var(--font-bellefair)',
         barlow: 'var(--font-barlow)',
       },
+      opacity: {
+        4: 0.04,
+      },
     },
   },
   plugins: [],
